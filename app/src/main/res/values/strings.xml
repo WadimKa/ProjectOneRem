@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Project One</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="listOfLinks">
+        <item>http://ep128.hostingradio.ru:8030/ep128</item>
+        <item>http://air.radiorecord.ru:8101/rr_128</item>
+        <item>http://icecast.russkoeradio.cdnvideo.ru/rr.mp3</item>
+        <item>http://nashe.streamr.ru/nashe-128.mp3</item>
+        <item>http://icecast.radiohitfm.cdnvideo.ru/hit.mp3</item>
+        <item>http://ic3.101.ru:8000/v1_1</item>
+        <item>http://ic3.101.ru:8000/v11_1</item>
+        <item>http://zaycevfm.cdnvideo.ru/ZaycevFM_pop_128.mp3</item>
+        <item>http://radiosilver.corbina.net:8000/silver128a.mp3</item>
+        <item>http://icecast.piktv.cdnvideo.ru/classic</item>
+    </string-array>
+
+    <string-array name="listOfNames">
+        <item>Европа Плюс</item>
+        <item>Радиорекорд</item>
+        <item>Русское Радио</item>
+        <item>Эхо Москвы</item>
+        <item>Хит FM </item>
+        <item>Энерджи</item>
+        <item>Comedy</item>
+        <item>Зайцев FM: Pop</item>
+        <item>Серебряный Дождь</item>
+        <item>Популярная Классика FM</item>
+    </string-array>
+
+    <string-array name="listOfImages">
+        <item>europa</item>
+        <item>record</item>
+        <item>rusradio</item>
+        <item>echo</item>
+        <item>hit</item>
+        <item>nrj</item>
+        <item>comedy</item>
+        <item>zaycev</item>
+        <item>silverrain</item>
+        <item>popclass</item>
+    </string-array>
+</resources>
