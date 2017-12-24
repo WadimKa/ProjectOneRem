@@ -1,5 +1,6 @@
 package com.po.wadim.projectonerem;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 public class ActivityOfListStation extends AppCompatActivity {
     RecyclerView recyclerView;
     String[] namesOfStation, imagesOfStation;
+    static String TAG_FOR_SEND_STATION = "tag_for_send_station";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class ActivityOfListStation extends AppCompatActivity {
 
     }
 
-    private class StationViewHolder extends RecyclerView.ViewHolder {
+    private class StationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView IVImageOfStation;
         TextView TVTitleOfStation;
 
@@ -39,12 +41,22 @@ public class ActivityOfListStation extends AppCompatActivity {
 
             TVTitleOfStation = itemView.findViewById(R.id.TVTitleOfStation);
             IVImageOfStation = itemView.findViewById(R.id.IVImageOfStation);
+
+            itemView.setOnClickListener(this);
         }
 
         public void bind(String title, String nameOfImage) {
             TVTitleOfStation.setText(title);
             IVImageOfStation.setImageResource(getResources().getIdentifier(nameOfImage, "drawable", getPackageName()));
 
+        }
+
+        @Override
+        public void onClick(View view) {
+            int itemId = getAdapterPosition();
+            Intent intent = new Intent(ActivityOfListStation.this, ActivityPlayer.class);
+            intent.putExtra(TAG_FOR_SEND_STATION, itemId);
+            startActivity(intent);
         }
     }
 
